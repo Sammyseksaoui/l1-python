@@ -56,13 +56,21 @@ def sommeTemps (temps1,temps2) :
 temps = secondeEnTemps (698486)
 sommeTemps ((2,3,4,25),(5,22,57,1))
 def tempsEnDate(temps) :
-    print (temps [0],temps[1],temps[2],temps[3,temps[4]])
+    temps [0]
+    temps [1]
+    temps [2]
+    temps [3]
+    temps [4]
+    sortie = print ("tempsEnDate", (temps [0],temps[1],temps[2],temps[3],temps[4]))
+    return sortie
     pass
 temps = (1970,1,0,0,0)
-#def afficheDate (date = -1) :
-    #pass
+print (tempsEnDate,(temps))
+def afficheDate (date = -1) :
+
+    pass
 
 temps = secondeEnTemps (1000000000)
-#afficheTemps (temps)
-#afficheDate (TempsEnDate(temps))
-#afficheDate ()
+affichetemps (temps)
+afficheDate (TempsEnDate(temps))
+afficheDate ()
