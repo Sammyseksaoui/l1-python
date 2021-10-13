@@ -60,17 +60,18 @@ def tempsEnDate(temps) :
     temps [1]
     temps [2]
     temps [3]
-    temps [4]
-    sortie = print ("tempsEnDate", (temps [0],temps[1],temps[2],temps[3],temps[4]))
+    sortie = print ("tempsEnDate", ("année",temps [0],"jour",temps[1],"heure",temps[2],"minute",temps[3]))
     return sortie
     pass
 temps = (1970,1,0,0,0)
 print (tempsEnDate,(temps))
 def afficheDate (date = -1) :
-
+    secondeEnTemps(1000000000)
+    sortie = print (secondeEnTemps(1000000000))
+    return sortie
     pass
 
 temps = secondeEnTemps (1000000000)
 affichetemps (temps)
-afficheDate (TempsEnDate(temps))
+afficheDate (tempsEnDate(temps))
 afficheDate ()
