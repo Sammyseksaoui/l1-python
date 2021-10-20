@@ -10,11 +10,12 @@ temps = (3,23,1,34)
 print (type(temps))
 print (tempsEnSeconde (temps)) 
 def secondeEnTemps (seconde) :
-    g = seconde % (3600*24)
+    e = seconde % 31536000
+    g = e % 86400
     h = g % 24
     j = h % 60
     k = seconde % 60
-    sortie = g, h, j , k
+    sortie = e,g, h, j , k
     return sortie 
     pass
 temps = secondeEnTemps(100000) 
@@ -60,7 +61,7 @@ def tempsEnDate(temps) :
     temps [1]
     temps [2]
     temps [3]
-    sortie = print ("tempsEnDate", ("année",temps [0],"jour",temps[1],"heure",temps[2],"minute",temps[3]))
+    sortie = print ("année",temps [0],"jour",temps[1],"heure",temps[2],"minute",temps[3])
     return sortie
     pass
 temps = (1970,1,0,0,0)
@@ -70,8 +71,37 @@ def afficheDate (date = -1) :
     sortie = print (secondeEnTemps(1000000000))
     return sortie
     pass
-
+seconde = 1000000000
 temps = secondeEnTemps (1000000000)
 affichetemps (temps)
 afficheDate (tempsEnDate(temps))
-afficheDate ()
+afficheDate (1970)
+import time
+#print (time.time ())
+#print (time.gmtime(0))
+#print (time.gmtime([1000000000]))
+
+def verifie(liste_temps):
+    _somme = 0
+    for i in liste_temps [0] :
+        _somme = 0 + i
+        if liste_temps [0] > 48 or  _somme > 140 :
+            print ("Charge horaire trop importante")
+    for i in liste_temps [1] :
+        _somme = 0 + i    
+        elif liste_temps [1] > 48 or _somme > 140 :
+            print ("Charge horaire trop importante")
+    for i in liste_temps [2] :
+        _somme = 0 + i
+        elif liste_temps [2] > 48 or liste_temps [2] > 140 :
+            print ("Charge horaire trop importante")
+        elif liste_temps [3] > 48 or liste_temps [3] > 140 :
+            print ("Charge horaire trop importante")
+        else :
+            print ("Charge horaire normal" )   
+    sortie = verifie (liste_temps)
+    return sortie
+    pass
+
+liste_temps = [[1,2,39,34],[0,1,9,4],[0,29,39,51],[0,31,13,46]]
+verifie(liste_temps)
