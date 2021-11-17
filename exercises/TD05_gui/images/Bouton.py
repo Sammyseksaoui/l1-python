@@ -7,7 +7,7 @@ def write_slogan():
 root = tk.Tk()
 frame = tk.Frame(root)
 frame.pack()
-canvas1 = tk.Canvas(root, relief = tk.FLAT, background = "black")
+canvas1 = tk.Canvas(root, relief = tk.FLAT, background = "blue")
 canvas1.pack()
 
 button = tk.Button(frame, 
