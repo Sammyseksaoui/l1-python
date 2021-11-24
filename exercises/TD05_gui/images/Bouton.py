@@ -21,3 +21,4 @@ slogan = tk.Button(frame,
 slogan.pack(side=tk.LEFT)
 
 root.mainloop()
+canvas.grid ()
