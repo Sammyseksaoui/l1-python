@@ -6,9 +6,13 @@ CANVAS_WIDTH, CANVAS_HEIGHT = 1200, 800
 root = tk.Tk()
 canvas1 = tk.Canvas(root, width = CANVAS_WIDTH, height = CANVAS_HEIGHT)  
 root.title ("Mon Dessin")
+global objects
+objects = []
 def write_slogan():
     print("bouton appuyé")
 
+def undo () :
+    return
 def creer_disque () :
     x0 = 300
     x1 = 200
@@ -36,14 +40,15 @@ def creer_croix ():
 canvas1 = tk.Canvas(root, relief = tk.FLAT, background = "black")
 canvas1.grid()
 button_1 = tk.Button (root,text ="Choisir une couleur",fg="red",command= write_slogan())
-button_1.grid ( row = 1 , column = 0,rowspan=3,ipadx= 50,sticky = N)
+button_1.grid ( row = 1 , sticky = N,column = 0)
 button_2 = tk.Button (root,text ="Cercle",fg="blue", command= creer_disque ())
-button_2.grid (row = 2, column = 2,rowspan=3,ipadx= 50,sticky = NE)
+button_2.grid (row = 2, sticky = NE,column = 2,)
 button_3 = tk.Button (root,text ="Carré",fg="red",command= creer_carre())
-button_3.grid (row = 3, column = 3,rowspan=3,ipadx= 50,sticky = NE)
+button_3.grid (row = 3,sticky = NE, column = 3)
 button_4 = tk.Button (root,text ="Croix",fg="yellow",command= creer_croix ())
-button_4.grid (row = 4, column = 4,rowspan=3,ipadx= 50, sticky = NE )
-
+button_4.grid (row = 4,sticky = NE , column = 4)
+button_5 = tk.Button (root,text = "undo")
+button_5.grid (row= 2,sticky = N,column= 0)
     # Fin de votre code
 
 root.mainloop()
