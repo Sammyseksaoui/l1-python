@@ -11,8 +11,7 @@ objects = []
 def write_slogan():
     print("bouton appuyé")
 
-def undo () :
-    return
+
 def creer_disque () :
     x0 = 300
     x1 = 200
@@ -23,7 +22,7 @@ def creer_disque () :
 def creer_carre () :
     points = [150, 100, 200, 100, 150, 200, 200,
     200]
-    canvas1.create_polygon(points, outline='red',
+    mycarre = canvas1.create_polygon(points, outline='red',
     fill='red', width=2)
     return canvas1.create_polygon (points,outline = 'red',fill= 'red',width = 2)
 
@@ -35,6 +34,11 @@ def creer_croix ():
     canvas1.create_line (150,200,200,400,)
     return
 
+def undo () :
+    canvas1.delete (canvas1.create_oval)
+    canvas1.delete (canvas1.create_polygon)
+    canvas1.delete (canvas1.create_polygon)
+    return
     # Début de votre code
 
 canvas1 = tk.Canvas(root, relief = tk.FLAT, background = "black")
