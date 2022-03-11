@@ -14,7 +14,7 @@ def syracuse(n):
             n = n // 2
             results.append (n)
     return results
-print(syracuse(3))
+print(syracuse(n))
 
 
 
